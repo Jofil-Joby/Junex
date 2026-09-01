@@ -1,0 +1,7 @@
+{
+  "name": "Disaster Mesh",
+  "description": "Offline-first emergency mesh communication and SOS relay network for citizens, volunteers, and verified responders.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
