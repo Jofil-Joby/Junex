@@ -2,90 +2,90 @@
 
 # JUNEX
 
-### Emergency communication and disaster coordination prototype
+### Emergency Communication & Disaster Coordination
 
 A concept Android application exploring how citizens, volunteers, and emergency responders could continue coordinating when conventional communication infrastructure becomes unreliable.
 
 <br/>
 
-<img src="docs/images/junex-demo.gif" alt="Junex application demo" width="850"/>
-
-<br/>
-
-[![Platform](https://img.shields.io/badge/Platform-Android-111111?style=flat-square)](https://www.android.com/)
-[![Language](https://img.shields.io/badge/Language-Kotlin-111111?style=flat-square)](https://kotlinlang.org/)
-[![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-111111?style=flat-square)](https://developer.android.com/compose)
-[![Status](https://img.shields.io/badge/Status-Prototype-111111?style=flat-square)](#project-status)
+[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)](https://www.android.com/)
+[![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=for-the-badge\&logo=kotlin\&logoColor=white)](https://kotlinlang.org/)
+[![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=for-the-badge)](https://developer.android.com/compose)
+[![Status](https://img.shields.io/badge/Status-Prototype-F59E0B?style=for-the-badge)](#project-status)
 
 <br/>
 
 > **When networks fail, coordination should not.**
 
-Junex explores a community-supported emergency communication model where critical information can be stored locally, relayed through nearby devices, and eventually delivered to emergency responders or network gateways.
+Junex explores how critical emergency information could be stored locally, relayed through nearby devices, and eventually delivered to responders or network gateways.
 
 </div>
 
 ---
 
-## Overview
+## What is Junex?
 
-During natural disasters and large-scale emergencies, communication infrastructure can become unreliable or unavailable entirely.
+During natural disasters and large-scale emergencies, communication infrastructure can become unreliable or unavailable.
 
-Junex explores an alternative approach to emergency coordination.
-
-The application connects three groups involved in a disaster response ecosystem:
-
-| Role          | Purpose                                                         |
-| ------------- | --------------------------------------------------------------- |
-| **Citizen**   | Request help, report hazards, and receive emergency information |
-| **Volunteer** | Assist nearby people and relay emergency messages               |
-| **Responder** | Monitor, manage, and resolve active incidents                   |
-
-The current version focuses on the **product experience, emergency workflows, and interaction model** behind a potential offline or mesh-supported communication system.
-
-> **Project Status:** Prototype / Concept Implementation
-
----
-
-# See Junex in Action
+Junex explores an alternative model for emergency coordination built around three groups:
 
 <div align="center">
 
-<img src="docs/images/junex-overview.png" alt="Junex overview" width="850"/>
+|    Citizen   |       Volunteer      |     Responder    |
+| :----------: | :------------------: | :--------------: |
+|      🚨      |          🤝          |        🛡️       |
+| Request help | Assist nearby people | Manage incidents |
 
 </div>
 
-Junex demonstrates how emergency information could move through a community-supported communication system.
+The current version focuses on the **product experience, emergency workflows, and interaction model** behind a potential community-supported communication system.
+
+> 🟠 **Project Status:** Prototype / Concept Implementation
+
+---
+
+## How It Works
+
+Junex demonstrates how emergency information could move through a disaster coordination workflow.
 
 ```text
-Citizen
-   │
-   │ Creates SOS / Hazard Report
-   ▼
-Local Device Storage
-   │
-   │ Message Relay
-   ▼
-Nearby Volunteer / Relay Node
-   │
-   │ Additional Relay Hops
-   ▼
-Gateway / Network Connection
-   │
-   ▼
-Emergency Responder
-   │
-   ▼
-Incident Management & Response
+┌──────────────┐
+│   CITIZEN    │
+│ Creates SOS  │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│ LOCAL DEVICE │
+│ Stores Data  │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  VOLUNTEER   │
+│ Relay Node   │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│   GATEWAY    │
+│ Sync Point   │
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  RESPONDER   │
+│   Incident   │
+└──────────────┘
 ```
 
 The current implementation simulates this workflow without requiring physical mesh networking hardware.
 
 ---
 
-# Core Features
+# Features
 
-## Emergency SOS
+## 🚨 Emergency SOS
 
 Citizens can create emergency requests through a guided SOS workflow.
 
@@ -97,31 +97,27 @@ The request can include:
 * Request status
 * Delivery progress
 
-Junex visualizes the journey of an emergency request through several stages:
+### Delivery Lifecycle
 
 ```text
-● Saved locally
-        ↓
-● Accepted by relay node
-        ↓
-● Received by gateway
-        ↓
-● Acknowledged by responders
+🟡 Saved Locally
+      ↓
+🔵 Accepted by Relay Node
+      ↓
+🟣 Received by Gateway
+      ↓
+🟢 Acknowledged by Responders
 ```
 
-<div align="center">
-
-<img src="docs/images/sos-flow.png" alt="Junex SOS workflow" width="850"/>
-
-</div>
+This allows users to understand where an emergency request is within the simulated delivery workflow.
 
 ---
 
-## Hazard Reporting
+## ⚠️ Hazard Reporting
 
-Users can report dangerous situations affecting their surrounding area.
+Users can report potentially dangerous situations in their area.
 
-Reports can include:
+Hazard reports can include:
 
 * Hazard category
 * Approximate location
@@ -129,24 +125,18 @@ Reports can include:
 * Number of people affected
 * Photo availability
 
-Community reports are displayed alongside official emergency information, allowing users to understand developing situations around them.
-
-<div align="center">
-
-<img src="docs/images/hazard-report.png" alt="Junex hazard reporting" width="850"/>
-
-</div>
+Community reports can exist alongside official emergency information to provide additional awareness during developing situations.
 
 ---
 
-## Emergency Alerts
+## 📢 Emergency Alerts
 
-Junex includes a dedicated emergency alert system.
+Junex provides a dedicated system for viewing emergency information.
 
-Alerts can provide:
+Alerts can include:
 
 * Verified emergency information
-* Severity levels
+* Alert severity
 * Safety instructions
 * Affected areas
 * Alert expiration information
@@ -156,13 +146,13 @@ Responder workflows also demonstrate the creation of verified emergency alerts.
 
 ---
 
-## Volunteer Assistance
+## 🤝 Volunteer Assistance
 
 Volunteers act as an important bridge between citizens and emergency coordination systems.
 
 Volunteer functionality includes:
 
-* Viewing nearby requests for assistance
+* Viewing nearby help requests
 * Reviewing emergency request details
 * Offering assistance
 * Relaying emergency messages
@@ -170,17 +160,11 @@ Volunteer functionality includes:
 * Managing relay mode
 * Emergency battery mode controls
 
-<div align="center">
-
-<img src="docs/images/volunteer-dashboard.png" alt="Junex volunteer dashboard" width="850"/>
-
-</div>
-
 ---
 
-## Responder Dashboard
+## 🛡️ Responder Dashboard
 
-Responders have access to an incident management workflow designed around active emergency coordination.
+Responders have access to an incident management workflow.
 
 Available functionality includes:
 
@@ -192,96 +176,9 @@ Available functionality includes:
 * Marking incidents as resolved
 * Creating verified emergency alerts
 
-<div align="center">
-
-<img src="docs/images/responder-dashboard.png" alt="Junex responder dashboard" width="850"/>
-
-</div>
-
 ---
 
-# How the System Works
-
-Junex connects multiple user roles through a shared emergency workflow.
-
-### 1. A citizen creates an emergency request
-
-A user creates an SOS request or reports a hazard.
-
-### 2. The information is stored locally
-
-The emergency information remains available within the application's local workflow.
-
-### 3. Nearby devices relay the message
-
-Junex simulates relay hops between nearby devices.
-
-### 4. A gateway receives the request
-
-The simulation demonstrates the emergency message reaching a network gateway.
-
-### 5. Responders receive the incident
-
-The incident appears in the responder workflow.
-
-### 6. The incident is managed
-
-Responders can acknowledge, assign, update, and resolve the incident.
-
----
-
-# User Roles
-
-## Citizen
-
-The citizen experience focuses on requesting help and receiving critical emergency information.
-
-**Available functionality**
-
-* Create SOS requests
-* Track SOS delivery progress
-* Report hazards
-* View verified alerts
-* View community reports
-* Access offline safety guidance
-* Check connection status
-
----
-
-## Volunteer
-
-The volunteer experience focuses on assisting nearby communities and participating in emergency communication.
-
-**Available functionality**
-
-* View nearby help requests
-* Review request details
-* Offer assistance
-* Participate in message relaying
-* Monitor relay activity
-* Manage emergency battery mode
-* View emergency alerts
-* Access offline safety guidance
-
----
-
-## Responder
-
-The responder experience focuses on emergency coordination and incident management.
-
-**Available functionality**
-
-* View active incident queues
-* Review incident details
-* Acknowledge incidents
-* Assign response teams
-* Update incident status
-* Resolve incidents
-* Create verified emergency alerts
-
----
-
-# Mesh Connection Simulation
+## 📡 Mesh Connection Simulation
 
 Junex currently includes an interactive simulation of emergency message delivery.
 
@@ -292,21 +189,31 @@ The simulation demonstrates:
 * Message delivery status changes
 * Incident synchronization across different user roles
 
-This makes it possible to explore the complete emergency workflow without requiring physical mesh networking hardware.
+```text
+Citizen Device
+      │
+      │  Emergency Message
+      ▼
+Volunteer Node
+      │
+      │  Relay
+      ▼
+Gateway
+      │
+      │  Incident Delivery
+      ▼
+Responder
+```
 
-<div align="center">
-
-<img src="docs/images/mesh-simulation.gif" alt="Junex mesh communication simulation" width="850"/>
-
-</div>
+> 🔵 The current system is a simulation designed to demonstrate the workflow and interaction model.
 
 ---
 
-# Offline Safety Guide
+## 📖 Offline Safety Guide
 
 Junex includes an offline safety section containing emergency guidance.
 
-The goal is to ensure that essential safety information remains accessible even when the communication workflow is unavailable.
+The goal is to keep essential information accessible even when conventional connectivity is unavailable.
 
 Potential guidance includes:
 
@@ -314,39 +221,88 @@ Potential guidance includes:
 * Emergency evacuation
 * Basic safety procedures
 * Communication guidance
-* Situation-specific safety instructions
+* Situation-specific instructions
+
+---
+
+# User Roles
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🚨 Citizen
+
+Request help and receive emergency information.
+
+**Capabilities**
+
+* Create SOS requests
+* Track delivery progress
+* Report hazards
+* View verified alerts
+* View community reports
+* Access safety guidance
+* Check connection status
+
+</td>
+
+<td width="33%" valign="top">
+
+### 🤝 Volunteer
+
+Assist people and support emergency communication.
+
+**Capabilities**
+
+* View nearby requests
+* Offer assistance
+* Relay emergency messages
+* Monitor relay activity
+* Manage relay mode
+* Enable battery-saving controls
+* Access emergency alerts
+
+</td>
+
+<td width="33%" valign="top">
+
+### 🛡️ Responder
+
+Coordinate and manage active incidents.
+
+**Capabilities**
+
+* View incidents
+* Review emergency details
+* Acknowledge requests
+* Assign teams
+* Update incident status
+* Resolve incidents
+* Create verified alerts
+
+</td>
+</tr>
+</table>
 
 ---
 
 # Technology Stack
 
-## Core
+<div align="center">
 
-* Kotlin
-* Android SDK
-* Jetpack Compose
-* Material 3
+| Core            | Architecture  | Additional |
+| --------------- | ------------- | ---------- |
+| Kotlin          | MVVM-inspired | Room       |
+| Android SDK     | ViewModel     | Firebase   |
+| Jetpack Compose | StateFlow     | Retrofit   |
+| Material 3      | Coroutines    | OkHttp     |
+|                 |               | Moshi      |
+|                 |               | KSP        |
 
-## Architecture
+</div>
 
-* MVVM-inspired architecture
-* ViewModel state management
-* Kotlin StateFlow
-* Kotlin Coroutines
-
-## Additional Technologies
-
-The project also contains infrastructure and dependencies for future development involving:
-
-* Room
-* Firebase
-* Firebase AI
-* Retrofit
-* OkHttp
-* Moshi
-* Kotlin Symbol Processing (KSP)
-
-Some of these integrations are currently reserved for future development and are not part of the active prototype workflow.
+Some integrations are currently reserved for future development and are not part of the active prototype workflow.
 
 ---
 
@@ -378,21 +334,13 @@ app/
 └── README.md
 ```
 
-The application is organized around:
-
-* **Models** for emergency and application data
-* **ViewModels** for application state and workflows
-* **Composable screens** for role-specific experiences
-* **Reusable UI components**
-* **Theme definitions** for the application's visual system
-
 ---
 
 # Getting Started
 
-## Prerequisites
+## Requirements
 
-Before running Junex, install:
+Make sure you have:
 
 * Android Studio
 * Android SDK
@@ -406,56 +354,52 @@ Clone the repository:
 git clone https://github.com/Jofil-Joby/Junex.git
 ```
 
-Move into the project directory:
+Move into the project:
 
 ```bash
 cd Junex
 ```
 
-Open the project in **Android Studio**.
+Then:
 
-Allow Gradle to synchronize and download the required dependencies.
-
-Then run the application using either:
-
-* An Android emulator
-* A physical Android device
+1. Open the project in **Android Studio**
+2. Allow **Gradle** to synchronize
+3. Select an emulator or physical device
+4. Run the application
 
 ---
 
-
-
 # Current Prototype Scope
 
-Junex currently demonstrates the **interaction model and product workflow** of a disaster communication system.
+Junex currently demonstrates the **product and interaction model** of a disaster communication system.
 
-The following features are currently simulated:
+The following functionality is currently simulated:
 
 * Device-to-device emergency message relaying
 * Gateway delivery
 * Network status changes
 * Cross-role incident synchronization
 
-> Junex does **not currently implement a real peer-to-peer mesh networking protocol between physical devices**.
+> 🔴 **Important:** Junex does not currently implement a real peer-to-peer mesh networking protocol between physical devices.
 
-The simulation is intended to demonstrate how information could move through such a system and how the different user roles could interact with shared emergency incidents.
+The simulation exists to demonstrate how information could move through such a system and how different user roles could interact with shared emergency incidents.
 
 ---
 
 # Future Development
 
-Potential future directions include:
+Potential directions for Junex include:
 
-* Real Bluetooth mesh communication
-* Wi-Fi Direct device communication
+* Bluetooth-based device communication
+* Wi-Fi Direct communication
 * Device discovery
-* Offline-first local data storage
+* Offline-first persistent storage
 * Persistent message queues
 * Encrypted emergency message transport
 * Real GPS integration
 * Photo capture and attachments
 * Persistent incident history
-* Backend synchronization when connectivity becomes available
+* Backend synchronization
 * Verified responder authentication
 * Push notifications
 * Multi-language emergency guidance
@@ -465,15 +409,24 @@ Potential future directions include:
 
 # Vision
 
-Junex explores a simple question:
+> **How can communities continue to communicate and coordinate when traditional communication infrastructure becomes unreliable?**
 
-> **How can communities continue to communicate and coordinate during an emergency when traditional communication infrastructure becomes unreliable?**
+Junex explores a role-based emergency ecosystem where:
 
-The project explores a role-based emergency ecosystem where:
+```text
+🚨 Citizens
+   Request help and report hazards
 
-* **Citizens** can request help and report hazards
-* **Volunteers** can assist nearby people and support communication
-* **Responders** can receive, manage, and resolve incidents
+        ↓
+
+🤝 Volunteers
+   Assist communities and relay information
+
+        ↓
+
+🛡️ Responders
+   Coordinate and manage incidents
+```
 
 While the current version is a prototype, the broader goal is to explore more resilient and community-supported approaches to emergency communication.
 
@@ -481,7 +434,7 @@ While the current version is a prototype, the broader goal is to explore more re
 
 # Disclaimer
 
-> **Junex is currently a prototype and must not be relied upon as a real emergency communication system.**
+> ⚠️ **Junex is currently a prototype and must not be relied upon as a real emergency communication system.**
 
 The application does not replace:
 
@@ -490,18 +443,18 @@ The application does not replace:
 * Established emergency communication infrastructure
 * Professional emergency response systems
 
-The networking and emergency workflows currently demonstrated in the application are conceptual and simulated.
+The networking and emergency workflows currently demonstrated are conceptual and simulated.
 
 ---
 
 <div align="center">
 
-### Junex
+## JUNEX
 
-**Exploring resilient communication when conventional networks cannot be relied upon.**
+**Resilient communication. Community coordination. Emergency response.**
 
 <br/>
 
-Built as an Android prototype for exploring emergency coordination, offline workflows, and community-supported communication.
+Built as an Android prototype exploring emergency coordination and communication when conventional networks become unreliable.
 
 </div>
