@@ -457,4 +457,9 @@ The networking and emergency workflows currently demonstrated are conceptual and
 
 Built as an Android prototype exploring emergency coordination and communication when conventional networks become unreliable.
 
+---
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 </div>
