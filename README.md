@@ -12,6 +12,7 @@ A concept Android application exploring how citizens, volunteers, and emergency 
 [![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=for-the-badge\&logo=kotlin\&logoColor=white)](https://kotlinlang.org/)
 [![UI](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=for-the-badge)](https://developer.android.com/compose)
 [![Status](https://img.shields.io/badge/Status-Prototype-F59E0B?style=for-the-badge)](#project-status)
+[![Android Build](https://github.com/Jofil-Joby/Junex/actions/workflows/android-build.yml/badge.svg)](https://github.com/Jofil-Joby/Junex/actions/workflows/android-build.yml)
 
 <br/>
 <p align="center">
@@ -411,6 +412,32 @@ Potential directions for Junex include:
 * Push notifications
 * Multi-language emergency guidance
 * Integration with disaster management organizations
+
+---
+
+# Roadmap
+
+## Prototype
+
+- [x] Role-based citizen, volunteer, and responder workflows
+- [x] SOS request simulation and delivery tracking
+- [x] Hazard reporting
+- [x] Emergency alerts
+- [x] Volunteer assistance workflow
+- [x] Responder incident management
+- [x] Simulated message relaying
+
+## Next Steps
+
+- [ ] Offline-first persistent storage
+- [ ] Bounded Bluetooth-based device communication
+- [ ] Wi-Fi Direct fallback
+- [ ] Device discovery
+- [ ] GPS integration
+- [ ] Encrypted message transport
+- [ ] Persistent incident history
+- [ ] Verified responder authentication
+- [ ] Offline message queue
 
 ---
 
