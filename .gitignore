@@ -1,0 +1,42 @@
+# Gradle
+.gradle/
+**/build/
+
+# Local Android configuration
+local.properties
+*.iml
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Firebase / Google configuration
+google-services.json
+firebase-debug.log
+
+# Signing keys and certificates
+*.jks
+*.keystore
+*.p12
+*.pem
+
+# Android Studio / IntelliJ
+.idea/
+*.iws
+*.ipr
+
+# Android build outputs
+*.apk
+*.aab
+
+# Native build directories
+.externalNativeBuild/
+.cxx/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
