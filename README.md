@@ -14,6 +14,13 @@ A concept Android application exploring how citizens, volunteers, and emergency 
 [![Status](https://img.shields.io/badge/Status-Prototype-F59E0B?style=for-the-badge)](#project-status)
 
 <br/>
+<p align="center">
+  <a href="#what-is-junex">Overview</a> •
+  <a href="#features">Features</a> •
+  <a href="#technology-stack">Tech Stack</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#future-development">Roadmap</a>
+</p>
 
 > **When networks fail, coordination should not.**
 
