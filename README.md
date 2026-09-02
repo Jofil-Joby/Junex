@@ -31,6 +31,16 @@ Junex explores how critical emergency information could be stored locally, relay
 
 ---
 
+## Demo
+
+A one-minute walkthrough of the current Junex prototype is available here:
+
+**[Watch the Junex demo on Google Drive](https://drive.google.com/file/d/1_h9Nj2J65IGLQUtehQXqTMQTex-kZXxP/view?usp=drivesdk)**
+
+The video demonstrates the current prototype workflow and interaction model.
+
+---
+
 ## What is Junex?
 
 During natural disasters and large-scale emergencies, communication infrastructure can become unreliable or unavailable.
