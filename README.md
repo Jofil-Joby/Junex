@@ -502,6 +502,15 @@ The networking and emergency workflows currently demonstrated are conceptual and
 Built as an Android prototype exploring emergency coordination and communication when conventional networks become unreliable.
 
 ---
+
+## More from the author
+
+- [GitHub profile and all repositories](https://github.com/Jofil-Joby?tab=repositories)
+- [Aster](https://github.com/Jofil-Joby/Aster), a focused Chrome new-tab dashboard
+- [PersonalOS](https://github.com/Jofil-Joby/PersonalOS), a local-first personal development system in planning and early implementation
+- [Real-Time Leaderboard](https://github.com/Jofil-Joby/Real-Time-Leaderboard), an early-stage Java project
+
+---
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
